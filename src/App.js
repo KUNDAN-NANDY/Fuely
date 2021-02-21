@@ -9,7 +9,7 @@ import "./App.css"
 
 import Navbar from "./components/navbar";
 import Home from "./components/home";
-import Footer from "./components/footer";
+//import Footer from "./components/footer";
 import NotFound from "./components/notfound";
 
 function App() {
@@ -22,7 +22,6 @@ function App() {
          <Route path="/not-found" component={NotFound} />
          <Redirect to="/not-found" />
         </Switch>
-        <Footer />
      </Router>
     </>
   );
