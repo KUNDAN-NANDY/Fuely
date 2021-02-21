@@ -7,6 +7,7 @@ import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import { green, red } from "@material-ui/core/colors";
 import { Grid } from "@material-ui/core";
+import Bounce from 'react-reveal/Bounce';
 
 const useStyles = makeStyles({
   root: {
@@ -27,6 +28,7 @@ const PriceCard = ({ state, data }) => {
   const classes = useStyles();
 
   return (
+  <Bounce bottom>
     <Card className={classes.root}>
       <CardContent>
         <Grid item container direction="row">
@@ -79,6 +81,7 @@ const PriceCard = ({ state, data }) => {
         </Grid>
       </CardContent>
     </Card>
+   </Bounce>
   );
 };
 

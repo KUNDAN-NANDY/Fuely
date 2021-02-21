@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import axios from "axios";
+import Container from '@material-ui/core/Container';
+
 
 class IpAddress extends Component {
     constructor() {
@@ -46,15 +48,27 @@ class IpAddress extends Component {
         let self = this;
         if (self.state.loading) {
             return (
-                <div className="App">
+              <Container>
+                <div className="location">
                     <h1>Loading IP Address</h1>
-                </div>
+                  </div>
+              </Container>
             );
         } else {
             return (
-                <div className="App">
-                    <h1>{self.state.regionName} </h1>
+              <Container>
+                <div className="location">
+                    <div class="row">
+                      <div class="col">      1 of 3
+                      </div> 
+                      <div class="col">
+                        2 of 3
+                      </div>
+                      <div class="col">      {self.state.regionName}
+                      </div>
+                    </div>
                 </div>
+              </Container>
             );
         }
 

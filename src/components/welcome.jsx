@@ -17,7 +17,8 @@ const contentStyle = {
   marginRight: '5px',
 };
     return(
-        <div className="time">
+ <>
+   <div className="time">
      <Container>
         <Row className="text-center">
           <Col><Icon.Clock size="18" style={contentStyle} />
@@ -25,8 +26,8 @@ const contentStyle = {
           <Col><Icon.Calendar size="18" style={contentStyle} />{date.toLocaleDateString()}</Col>
         </Row>
       </Container>
-           
-        </div>
+      </div>
+  </>
     )
 }
 
