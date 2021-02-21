@@ -2,7 +2,6 @@ import React, {Suspense} from 'react';
 import { Spin } from 'antd';
 import {Helmet} from 'react-helmet';
 
-import {Container} from 'react-bootstrap';
 
 //const Slider = React.lazy(() => import('./slider'));
 const Welcome = React.lazy(() => import('./welcome'));
@@ -28,8 +27,7 @@ const Home = (props) => {
      <div className="container mt-3 mb-4">
      <Price />
      </div>
-     <Container>
-     </Container>
+     
     </Suspense>
     </>
   );
