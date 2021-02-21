@@ -3,11 +3,18 @@ import { Spin } from 'antd';
 import {Helmet} from 'react-helmet';
 
 import {Container} from 'react-bootstrap';
-const Slider = React.lazy(() => import('./slider'));
+
+//const Slider = React.lazy(() => import('./slider'));
 const Welcome = React.lazy(() => import('./welcome'));
 const Price = React.lazy(() => import('./price'));
 const List = React.lazy(() => import('./list'));
-const Reason = React.lazy(() => import('./reason'));
+//const Reason = React.lazy(() => import('./reason'));
+const contentStyle = {
+ marginTop: "50%",
+ marginLeft: "49%",
+ marginRight: "49%",
+ justifyContent: "center",
+};
 
 const Home = (props) => {
   return (
@@ -15,15 +22,13 @@ const Home = (props) => {
     <Helmet>
       <title>Fuley - Daily Fuel Price</title>
     </Helmet>
-    <Suspense fallback={<div><Spin /></div>}>
-     <Slider/>
-     <Welcome />
+    <Suspense fallback={<div style={contentStyle}><Spin /></div>}>
      <List />
+     <Welcome />
      <div className="container mt-3 mb-4">
      <Price />
      </div>
      <Container>
-     <Reason />
      </Container>
     </Suspense>
     </>
