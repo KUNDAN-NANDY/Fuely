@@ -112,10 +112,10 @@ const Price = () => {
     async function getPricesForState() {
       if (state && district) {
         setLoading(true);
-        var url = `https://api.cretic.co.in/price/${state.id}/${district.id}`;
+        var url = `https://api.cretic.co.in/api//price/${state.id}/${district.id}`;
 
         if (district.id === "All")
-          url = `https://api.cretic.co.in/price/${state.id}`;
+          url = `https://api.cretic.co.in/api//price/${state.id}`;
 
         const data = await axios.get(url);
         setData(data.data);
@@ -130,7 +130,7 @@ const Price = () => {
     async function getStatesData() {
       setLoadingStates(true);
       const data = await axios.get(
-        "https://api.cretic.co.in/states"
+        "https://api.cretic.co.in/api//states"
       );
       var modifiedData = Object.keys(data.data).map((key) => {
         return {
@@ -155,7 +155,7 @@ const Price = () => {
     async function getDistrictsData() {
       setLoadingDistricts(true);
       const data = await axios.get(
-        `https://api.cretic.co.in/${
+        `https://api.cretic.co.in/api//${
           state && state.id
         }/districts`
       );
