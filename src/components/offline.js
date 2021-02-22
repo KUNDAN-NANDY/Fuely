@@ -1,57 +1,43 @@
-import React, { Component } from 'react';
-import { withToastManager } from 'react-toast-notifications';
+import React, { useEffect, useState } from "react";
 
-class ConnectivityListener extends Component {
-  state = { isOnline: window ? window.navigator.onLine : false };
 
-  // NOTE: add/remove event listeners omitted for brevity
+const InstallPWA = () => {
+  const [supportsPWA, setSupportsPWA] = useState(false);
+  const [promptInstall, setPromptInstall] = useState(null);
 
-  onlineCallback = () => {
-    this.props.toastManager.remove(this.offlineToastId);
-    this.offlineToastId = null;
-  };
-  offlineCallback = id => {
-    this.offlineToastId = id;
-  }
+  useEffect(() => {
+    const handler = e => {
+      e.preventDefault();
+      console.log("we are being triggered :D");
+      setSupportsPWA(true);
+      setPromptInstall(e);
+    };
+    window.addEventListener("beforeinstallprompt", handler);
 
-  getSnapshotBeforeUpdate(prevProps, prevState) {
-    const { isOnline } = this.state;
+    return () => window.removeEventListener("transitionend", handler);
+  }, []);
 
-    if (prevState.isOnline !== isOnline) {
-      return { isOnline };
+  const onClick = evt => {
+    evt.preventDefault();
+    if (!promptInstall) {
+      return;
     }
-
+    promptInstall.prompt();
+  };
+  if (!supportsPWA) {
     return null;
   }
-  componentDidUpdate(props, state, snapshot) {
-    if (!snapshot) return;
+  return (
+    <button
+      className="link-button"
+      id="setup_button"
+      aria-label="Install app"
+      title="Install app"
+      onClick={onClick}
+    >
+      Install
+    </button>
+  );
+};
 
-    const { toastManager } = props;
-    const { isOnline } = snapshot;
-
-    const content = (
-      <div>
-        <strong>{isOnline ? 'Online' : "Offline"}</strong>
-        <div>
-          {isOnline
-            ? 'Editing is available again'
-            : 'Changes you make may not be saved'}
-        </div>
-      </div>
-    );
-
-    const callback = isOnline
-      ? this.onlineCallback
-      : this.offlineCallback;
-
-    toastManager.add(content, {
-      appearance: 'info',
-      autoDismiss: isOnline,
-    }, callback);
-  }
-  render() {
-    return null;
-  }
-}
-
-export default withToastManager(ConnectivityListener);
+export default InstallPWA;
