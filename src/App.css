@@ -4,6 +4,9 @@ body {
   overflow-x: hidden;
 
 }
+.install {
+  margin-left: 7px;
+}
 .location {
   color: #fff;
   margin-top: 8px;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import Button from '@material-ui/core/Button';
 
 const InstallPWA = () => {
   const [supportsPWA, setSupportsPWA] = useState(false);
@@ -8,7 +8,7 @@ const InstallPWA = () => {
   useEffect(() => {
     const handler = e => {
       e.preventDefault();
-      console.log("we are being triggered :D");
+      
       setSupportsPWA(true);
       setPromptInstall(e);
     };
@@ -28,15 +28,14 @@ const InstallPWA = () => {
     return null;
   }
   return (
-    <button
-      className="link-button"
-      id="setup_button"
-      aria-label="Install app"
-      title="Install app"
-      onClick={onClick}
-    >
-      Install
-    </button>
+    <Button variant="outlined" 
+    color="primary"
+    id="setup_button"
+    aria-label="Install app"
+    title="Install app"
+    onClick={onClick}>
+        Install App
+      </Button>
   );
 };
 
