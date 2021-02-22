@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 //import LeftMenu from './LeftMenu'
 import RightMenu from './RightMenu'
 import { Drawer, Button } from 'antd';
-import Install from "./install"
 
 class Navbar extends Component {
 	state = {
@@ -26,9 +25,7 @@ class Navbar extends Component {
 			<nav className="menuBar">
 				<div className="logo">
 					<a href="/">Fuley</a>
-					<div className="install">
-					  <Install />
-					</div>
+					
 				</div>
 				<div className="menuCon">
 					<div className="rightMenu">
