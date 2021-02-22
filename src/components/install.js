@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Zoom from 'react-reveal/Zoom';
 
 
 const InstallPWA = () => {
@@ -28,6 +29,7 @@ const InstallPWA = () => {
     return null;
   }
   return (
+   <Zoom right>
    <div className="install">
     <button onClick={onClick} class="learn-more">
     <span class="circle" aria-hidden="true">
@@ -36,6 +38,7 @@ const InstallPWA = () => {
     <span class="button-text">Install App</span>
     </button>
    </div>
+  </Zoom>
   );
 };
 
