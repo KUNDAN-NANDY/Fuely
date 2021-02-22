@@ -1,5 +1,5 @@
 # Demo
-[https://fule.cretic.co.in/]
+[https://fuely.cretic.co.in/]
 
 # Getting Started with Create React App
 

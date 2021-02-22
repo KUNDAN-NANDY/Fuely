@@ -2,12 +2,13 @@ import React, {Suspense} from 'react';
 import { Spin } from 'antd';
 import {Helmet} from 'react-helmet';
 
-//const Slider = React.lazy(() => import('./slider'));
+const Install = React.lazy(() => import('./install'));
 const Welcome = React.lazy(() => import('./welcome'));
 const Price = React.lazy(() => import('./price'));
 const List = React.lazy(() => import('./list'));
 const Alert = React.lazy(() => import('./alert'));
 const Footer = React.lazy(() => import('./footer'));
+
 const contentStyle = {
  marginTop: "50%",
  marginLeft: "49%",
@@ -29,6 +30,7 @@ const Home = (props) => {
      </div>
      <div className="container mt-3">
       <Alert/>
+      <Install />
       <Footer />
      </div>
     </Suspense>
