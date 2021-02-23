@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     minHeight: "auto",
     background: "rgb(0,201,167)",
-    background: "linear-gradient(0deg, rgba(0,201,167,0.9745012246645414) 18%, rgba(0,158,250,1) 75%)",
+    backgroundImage: "linear-gradient(to right top, #7f7fd5, #7f87d9, #7f8fdd, #8097e1, #829ee4, #7ba8e9, #75b2ed, #73bbef, #6cc8f0, #70d5ee, #7de0e9, #91eae4)",
     borderRadius: "8px",
     boxShadow:  "3px 3px 5px 6px #ccc",
     '& label.Mui-focused': {
