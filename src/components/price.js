@@ -155,7 +155,7 @@ const Price = () => {
     async function getDistrictsData() {
       setLoadingDistricts(true);
       const data = await axios.get(
-        `https://api.cretic.co.in/api//${
+        `https://api.cretic.co.in/api/${
           state && state.id
         }/districts`
       );

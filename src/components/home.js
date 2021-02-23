@@ -2,7 +2,7 @@ import React, {Suspense} from 'react';
 import { Spin } from 'antd';
 import {Helmet} from 'react-helmet';
 
-const Install = React.lazy(() => import('./install'));
+//const Install = React.lazy(() => import('./install'));
 const Welcome = React.lazy(() => import('./welcome'));
 const Price = React.lazy(() => import('./price'));
 const List = React.lazy(() => import('./list'));
@@ -30,7 +30,6 @@ const Home = (props) => {
      </div>
      <div className="container mt-3">
       <Alert/>
-      <Install />
       <Footer />
      </div>
     </Suspense>
