@@ -5,5 +5,6 @@ function States (props) {
     <>
      <h2>States</h2>
     </>
+    );
 }
 export default States;
