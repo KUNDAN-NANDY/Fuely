@@ -4,7 +4,36 @@ body {
   overflow-x: hidden;
 
 }
-
+.available_state{
+  margin-top: 30px;
+}
+.state_grid {
+  background-image: linear-gradient(to left bottom, #3a7bd5, #0f92e5, #00a8f1, #00bdf9, #00d2ff);
+  justify-content: center;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+ -moz-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 30px;
+  justify-content: center;
+}
+.grid-item {
+  border: 1px solid #fff;
+  padding: 5px;
+  text-align: center;
+  justify-content: center;
+}
+.grid-item h4{
+  color: #fff;
+}
+/* Grid */
+.list_bord{
+  border: 2px solid #73AD21;
+}
 .states_card {
        -webkit-box-shadow: 3px 3px 5px 6px #ccc;
        -moz-box-shadow: 3px 3px 5px 6px #ccc;
@@ -74,10 +103,10 @@ body {
   box-shadow:         3px 3px 5px 6px #ccc;
   border-radius: 8px 8px;
   margin-top: 10px;
-  background-image: linear-gradient(to right top, #c4e0e5, #a8d0d7, #8bc0ca, #6db1bc, #4ca1af);
+  background-image: radial-gradient(circle, #6190e8, #739ce9, #84a8e9, #95b3e8, #a7bfe8);
   color: #fff;
   font-weight: bold;
-  padding: 15px;
+  padding: 20px;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -107,11 +136,9 @@ body {
   -webkit-box-shadow: 3px 3px 5px 6px #ccc;
   -moz-box-shadow:    3px 3px 5px 6px #ccc;
   box-shadow: 3px 3px 5px 6px #ccc;
-  margin-top: 5px;
-  margin-bottom: 8px;
-  margin-left: 12px;
-  margin-right: 12px;
-  background-image: linear-gradient(to right, #243b55, #20334b, #1c2c42, #182539, #141e30);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-image: radial-gradient(circle, #141e30, #182539, #1c2c42, #20334b, #243b55);
   color: #fff;
   font-weight: bold;
   padding: 15px;
@@ -130,7 +157,7 @@ body {
   color: #000;
 }
 .logo a{
-  background: -webkit-linear-gradient(#ED8F03, #FFB75E);
+  background: -webkit-linear-gradient(#0072ff, #00c6ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -145,7 +172,6 @@ body {
   display: inline-block;
   font-size: 20px;
   padding: 19px 20px;
-  text-transform: uppercase;
 }
 
 .menuCon {

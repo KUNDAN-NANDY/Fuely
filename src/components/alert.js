@@ -17,7 +17,7 @@ function PriceConfirm (props) {
     <Fade right>
      <Alert style={contentStyle} severity="info">Prices may vary from outlet to outlet within a city/town/sales area.</Alert>
     </Fade>
-    <Fade right>
+    <Fade left>
      <Alert style={susStyle} severity="success">The prices are revised at 6 AM every morning at petrol pumps.</Alert>
      </Fade>
     </>
