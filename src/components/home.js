@@ -2,7 +2,8 @@ import React, {Suspense} from 'react';
 import { Spin } from 'antd';
 import {Helmet} from 'react-helmet';
 
-//const Install = React.lazy(() => import('./install'));
+
+//onstt Install = React.lazy(() => import('./state'));
 const Welcome = React.lazy(() => import('./welcome'));
 const Price = React.lazy(() => import('./price'));
 const List = React.lazy(() => import('./list'));

@@ -18,15 +18,15 @@ const contentStyle = {
 };
     return(
  <>
-   <div className="time">
      <Container>
+     <div className="time">
         <Row className="text-center">
           <Col><Icon.Clock size="18" style={contentStyle} />
           <span>{date.toLocaleTimeString()}</span></Col>
           <Col><Icon.Calendar size="18" style={contentStyle} />{date.toLocaleDateString()}</Col>
         </Row>
-      </Container>
       </div>
+      </Container>
   </>
     )
 }
