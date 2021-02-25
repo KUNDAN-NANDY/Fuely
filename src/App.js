@@ -11,8 +11,8 @@ import "./icon.css";
 import Navbar from "./components/navbar";
 import Home from "./components/home";
 import NotFound from "./components/notfound";
-import States from "./components/states";
 import State from "./components/state";
+import States from "./components/states";
 
 
 function App() {

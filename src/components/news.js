@@ -4,7 +4,6 @@ import { Carousel } from 'antd';
 
 function FAQ(props) {
   const [faq, setFaq] = useState([]);
-  //const id = props.match.params.id;
   
 const contentStyle = {
   height: '160px',
@@ -23,14 +22,12 @@ const newsCard = {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
-  let id = props.match.params.id;
 
   const getFAQs = () => {
     axios
-      .get('https://api.cretic.co.in/api/price/${id}')
+      .get('"https://api.cretic.co.in/api/price/west-bengal')
       .then((response) => {
-        setFaq({ hits: response.data });
+        setFaq({ hits: data });
       })
       .catch((error) => {
         console.log(error);
@@ -39,7 +36,6 @@ const newsCard = {
 
   return (
     <div className="FAQ">
-    <h3>{id}</h3>
       <ul>
         {faq.hits &&
           faq.hits.map((item, index) => (
