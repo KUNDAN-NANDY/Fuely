@@ -28,7 +28,7 @@ const newsCard = {
 
   const getFAQs = () => {
     axios
-      .get('https://api.cretic.co.in/api/price/${id}')
+      .get('https://api.cretic.co.in/api/price/'+id)
       .then((response) => {
         setFaq({ hits: response.data });
       })
